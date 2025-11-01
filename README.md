@@ -334,10 +334,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-<div align="center">
 
-### Made with 💖 by Pramodya Warnakula
-
-⭐ Star this repo if you like it!
-
-</div>
