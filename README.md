@@ -14,9 +14,10 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 - **Modern UI/UX** - Clean, professional design with pink and black theme
 - **Smooth Animations** - Scroll-triggered animations for enhanced user experience
 - **Interactive Elements** - Hover effects, animated skill bars, and smooth transitions
-- **Project Showcase** - 10 featured projects with detailed individual pages
-- **Professional Sections** - Home, About, Experience, Education, Projects, Skills, References
-- **Contact Integration** - Direct links to email, phone, GitHub, and LinkedIn
+- **Project Showcase** - 9 featured projects with detailed individual pages
+- **Professional Sections** - Home, Experience, Education, Projects, Skills
+- **Contact Integration** - Direct links to email, GitHub, and LinkedIn
+- **Resume Download** - One-click resume download button
 - **SEO Optimized** - Meta tags and semantic HTML structure
 
 ---
@@ -43,7 +44,8 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 portfolio/
 │
 ├── index.html                 # Main portfolio page
-├── about.html                 # About me page
+├── navbar.html                # Navigation component
+├── footer.html                # Footer component
 ├── README.md                  # Project documentation
 │
 ├── css/
@@ -54,6 +56,9 @@ portfolio/
 │   ├── script.js             # Main portfolio JavaScript
 │   └── project-script.js     # Shared project page JavaScript
 │
+├── assets/
+│   └── Pramodya_Warnakula_Resume.pdf  # Downloadable resume
+│
 ├── images/
 │   ├── profile.png           # Profile photo
 │   └── projects/             # Project screenshots (4 per project)
@@ -61,7 +66,6 @@ portfolio/
 │       ├── gps1-4.jpg
 │       ├── travel1-4.jpg
 │       ├── restaurant1-4.jpg
-│       ├── billing1-4.jpg
 │       ├── dogfood1-4.jpg
 │       ├── forecastflow1-4.jpg
 │       ├── dotnetquiz1-4.jpg
@@ -72,8 +76,7 @@ portfolio/
     ├── fingerprint.html
     ├── gps.html
     ├── travel.html
-    ├── restaurant.html
-    ├── billing.html
+    ├── resturant.html
     ├── dogfood.html
     ├── forecastflow.html
     ├── dotnet-quiz.html
@@ -101,27 +104,23 @@ Full-featured booking platform with secure payments.
 **Tech Stack:** PHP, MySQL, AJAX, Bootstrap  
 Dynamic restaurant system with reservations and reviews.
 
-### 5. Billing Management System
-**Tech Stack:** Java, JSP/Servlets, MySQL, Maven  
-Enterprise billing system with role-based authentication.
-
-### 6. Dog Food Mobile App
+### 5. Dog Food Mobile App
 **Tech Stack:** Kotlin, Java, Android SDK, Firebase  
 E-commerce mobile app with real-time inventory updates.
 
-### 7. ForecastFlow Weather App
+### 6. ForecastFlow Weather App
 **Tech Stack:** ASP.NET Core, Razor Pages, OpenWeatherMap API  
 Modern weather forecast app with glassmorphic design.
 
-### 8. .NET Interview Quiz
+### 7. .NET Interview Quiz
 **Tech Stack:** ASP.NET Core MVC, Entity Framework, SQL Server  
 Professional quiz app for interview preparation.
 
-### 9. PahanaEdu Bookshop
+### 8. PahanaEdu Bookshop
 **Tech Stack:** Java Servlets, MySQL, Bootstrap  
 Comprehensive bookshop management system.
 
-### 10. Resume Screening System
+### 9. Resume Screening System
 **Tech Stack:** ASP.NET, C#, ML Algorithms  
 AI-powered resume analysis with ranking dashboard.
 
@@ -132,44 +131,54 @@ AI-powered resume analysis with ranking dashboard.
 ### 🏠 Home Section
 - Eye-catching hero section with gradient overlay
 - Profile photo with floating animation
-- Quick contact links
-- Call-to-action buttons
+- Quick contact links (Email, GitHub, LinkedIn)
+- Call-to-action buttons (View My Work, Get In Touch, Download Resume)
+- Animated background with floating icons
 
 ### 💼 Experience Section
-- Vertical timeline design
+- Professional timeline design
 - Animated markers with pulse effect
-- Achievement cards with icons
-- Hover effects and transitions
+- Achievement cards with icons highlighting key contributions
+- Hover effects with smooth transitions
+- Detailed internship information (Ceylon Electricity Board)
 
 ### 🎓 Education Section
-- Professional card layout
+- Professional card layout with 3D hover effects
 - Icon badges for each education level
 - Gradient dividers
-- Hover animations
+- Rotating icon animations
+- Educational timeline (BSc, A/L, O/L)
 
 ### 🚀 Projects Section
-- Grid layout with 10 projects
-- Click-to-navigate to detail pages
-- Technology tags
-- Smooth hover effects
+- Grid layout with 9 featured projects
+- Click-to-navigate to detailed project pages
+- Technology tags with gradient backgrounds
+- Shine effect on hover
+- Project descriptions and tech stacks
 
 ### 💻 Skills Section
-- Animated progress bars
+- **Technical Skills:**
+  - Programming Languages (Java, C#, PHP, JavaScript)
+  - Frontend Development (HTML/CSS, Angular, Bootstrap)
+  - Backend Development (ASP.NET Core, PHP)
+  - Database Technologies (MySQL, Firebase, MongoDB)
+- Animated progress bars with shimmer effects
 - Staggered animations on scroll
-- Technical & soft skills separation
 - Icon-based categories
-
-### 📧 References Section
-- Professional card design
-- Avatar icons with gradients
-- Contact information
-- Hover effects
+- **Soft Skills:**
+  - Leadership & Team Management
+  - Effective Communication
+  - Time Management
+  - Problem Solving
+  - Teamwork & Collaboration
+  - Confidence & Presentation Skills
 
 ### 📱 Footer
-- 4-column layout
-- Social media links
+- Multi-column layout
+- Social media links with hover animations
 - Quick navigation
 - Contact information
+- Heartbeat animation
 - Technology showcase
 
 ---
@@ -189,13 +198,19 @@ git clone https://github.com/pramodya112/portfolio.git
 cd portfolio
 ```
 
-2. **Open in browser**
+2. **Add your resume**
+```bash
+# Place your PDF resume in the assets folder
+# Name it: Pramodya_Warnakula_Resume.pdf
+```
+
+3. **Open in browser**
 ```bash
 # Simply open index.html in your browser
 # Or use a local server (recommended)
 ```
 
-3. **Using VS Code Live Server** (Recommended)
+4. **Using VS Code Live Server** (Recommended)
 ```bash
 # Install Live Server extension in VS Code
 # Right-click on index.html
@@ -207,6 +222,7 @@ cd portfolio
 1. **Update Personal Information**
    - Edit `index.html` - Update name, contact details, bio
    - Replace `images/profile.png` with your photo
+   - Update resume in `assets/` folder
 
 2. **Modify Colors**
    - Edit `css/styles.css` - Change CSS variables:
@@ -215,6 +231,9 @@ cd portfolio
        --primary-pink: #ff1493;  /* Main pink color */
        --light-pink: #ff69b4;    /* Light pink accent */
        --dark-pink: #c71585;     /* Dark pink shade */
+       --black: #0a0a0a;         /* Background black */
+       --dark-gray: #1a1a1a;     /* Dark gray */
+       --mid-gray: #2a2a2a;      /* Mid gray */
    }
    ```
 
@@ -222,10 +241,15 @@ cd portfolio
    - Edit project cards in `index.html`
    - Create new project pages in `projects/` folder
    - Add project images to `images/projects/`
+   - Update project links and descriptions
 
 4. **Update Social Links**
-   - Edit links in navigation and footer
-   - Update GitHub, LinkedIn URLs
+   - Edit links in `navbar.html` and `footer.html`
+   - Update GitHub, LinkedIn, Email URLs
+
+5. **Modify Navbar/Footer**
+   - Edit `navbar.html` for navigation changes
+   - Edit `footer.html` for footer content
 
 ---
 
@@ -241,6 +265,7 @@ Mobile features:
 - Stacked layouts
 - Touch-friendly buttons
 - Optimized images
+- Full-width CTAs
 
 ---
 
@@ -255,12 +280,12 @@ Mobile features:
 ### Netlify
 1. Drag and drop folder to Netlify
 2. Or connect GitHub repository
-3. Configure build settings
+3. Configure build settings (none needed for static site)
 4. Deploy
 
 ### Vercel
 1. Import GitHub repository
-2. Configure project
+2. Configure project settings
 3. Deploy instantly
 
 ---
@@ -271,6 +296,7 @@ Mobile features:
 - **Load Time:** < 2 seconds
 - **Mobile Friendly:** Yes
 - **SEO Optimized:** Yes
+- **Accessibility:** WCAG 2.1 compliant
 
 ---
 
@@ -281,6 +307,18 @@ Mobile features:
 - ✅ Safari (latest)
 - ✅ Edge (latest)
 - ✅ Opera (latest)
+
+---
+
+## 🎯 Key Animations
+
+- **Hero Section:** Gradient zoom, floating profile photo, text glow
+- **Navigation:** Slide down, underline hover effects
+- **Skills:** Animated progress bars, bouncing arrows
+- **Projects:** Shine effect, 3D tilt on hover
+- **Education:** Card rotation, icon spin
+- **Buttons:** Ripple effect, gradient hover, download bounce
+- **Scroll:** Intersection Observer triggered animations
 
 ---
 
@@ -297,26 +335,36 @@ This project is open source and available under the [MIT License](LICENSE).
 - 📧 Email: pramodyawarnakula295@gmail.com
 - 💼 LinkedIn: [pramodya-warnakula](https://linkedin.com/in/pramodya-warnakula)
 - 🐙 GitHub: [pramodya112](https://github.com/pramodya112)
-- 🌐 Portfolio: [https://pramodya-warnakula.netlify.app/]
+- 🌐 Portfolio: [https://pramodya-warnakula.netlify.app/](https://pramodya-warnakula.netlify.app/)
+- 📍 Location: Negombo, Western Province, LK
 
 ---
 
 ## 🙏 Acknowledgments
 
 - Font Awesome for icons
-- Unsplash for placeholder images
+- Unsplash for hero background images
 - Google Fonts for typography inspiration
 - GitHub community for open-source inspiration
+- Cardiff Metropolitan University for education
 
 ---
 
 ## 📝 Version History
 
-- **v1.0.0** (2025-01-01) - Initial release
-  - 10 featured projects
+- **v1.1.0** (2025-01-19)
+  - Added download resume button with animations
+  - Improved responsive button layout
+  - Enhanced CTA section with three-button design
+  - Removed references section
+  - Updated project count to 9 featured projects
+  
+- **v1.0.0** (2025-01-01)
+  - Initial release
+  - 9 featured projects
   - Responsive design
   - Animated sections
-  - Professional navbar
+  - Professional navbar and footer components
   - Contact integration
 
 ---
@@ -326,12 +374,26 @@ This project is open source and available under the [MIT License](LICENSE).
 - [ ] Add blog section
 - [ ] Implement dark/light mode toggle
 - [ ] Add testimonials section
-- [ ] Create project filters
-- [ ] Add contact form with backend
-- [ ] Implement analytics
-- [ ] Add more animations
-- [ ] Create certificate showcase
+- [ ] Create project filters by technology
+- [ ] Add contact form with backend integration
+- [ ] Implement Google Analytics
+- [ ] Add more micro-animations
+- [ ] Create certificate showcase section
+- [ ] Add project search functionality
+- [ ] Implement lazy loading for images
 
 ---
 
+## 🤝 Contributing
 
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/pramodya112/portfolio/issues).
+
+---
+
+## ⭐ Show Your Support
+
+Give a ⭐️ if you like this project!
+
+---
+
+**Made with ❤️ by Pramodya Warnakula**
